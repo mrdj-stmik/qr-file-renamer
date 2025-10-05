@@ -1,3 +1,22 @@
+"""
+Stable QR File Renamer v2.0
+Enhanced QR Code Detection with OpenCV Multi-Variant Processing
+
+© mrdj 2025 for Team Wilkerstat 3206
+BPS (Badan Pusat Statistik) Tasikmalaya
+
+This application uses 280 detection combinations:
+- 14 image processing variants
+- 5 threshold values  
+- 4 rotation angles
+
+Features:
+- Professional GUI with real-time logging
+- Enhanced QR detection accuracy (~90%)
+- Batch processing with threading
+- Comprehensive error handling
+"""
+
 import os
 import cv2
 import tkinter as tk
@@ -288,6 +307,8 @@ def start_process_stable(entry_input, root):
              font=("Arial", 14, "bold"), fg="white", bg="darkgreen").pack(pady=5)
     tk.Label(header_frame, text="OpenCV Multi-Variant Detection (14 variants × 5 thresholds × 4 rotations)", 
              font=("Arial", 10), fg="lightgreen", bg="darkgreen").pack()
+    tk.Label(header_frame, text="© mrdj 2025 for Team Wilkerstat 3206", 
+             font=("Arial", 9, "italic"), fg="lightblue", bg="darkgreen").pack()
 
     # Progress bar
     progress_var = tk.DoubleVar()
@@ -352,6 +373,8 @@ def main():
              font=("Arial", 16, "bold"), fg="white", bg="darkgreen").pack(pady=5)
     tk.Label(header_frame, text="OpenCV Enhanced - 14 Variants × 5 Thresholds × 4 Rotations = 280 Combinations!", 
              font=("Arial", 11), fg="lightgreen", bg="darkgreen").pack()
+    tk.Label(header_frame, text="© mrdj 2025 for Team Wilkerstat 3206", 
+             font=("Arial", 9, "italic"), fg="lightblue", bg="darkgreen").pack()
 
     # Input folder
     input_frame = tk.Frame(root, bg="lightgreen")
